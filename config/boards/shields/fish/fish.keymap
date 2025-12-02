@@ -44,8 +44,9 @@
     // 独自の入力を定義できる（上級者向け）
 
     behaviors {
-        td_xn: td_xn {
-            compatible = "zmk,behavior-tap-dance";
+        macro_xn: macro_xn {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO_XN";
             #binding-cells = <0>;
             bindings = <&kp X>, <&kp N>;
         };
@@ -82,7 +83,7 @@
 
         combo_xn {
             key-positions = <16 17>;
-            bindings = <&td_xn>;
+            bindings = <&macro_xn>;
         };
 
         combo_lang1 {
