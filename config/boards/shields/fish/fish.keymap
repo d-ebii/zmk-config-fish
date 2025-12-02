@@ -70,6 +70,16 @@
             bindings = <&kp LANG2>;
         };
 
+        combo_esc {
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_n {
+            key-positions = <16 17>;
+            bindings = <&>;
+        };
+
         combo_lang1 {
             key-positions = <15 16>;
             bindings = <&kp LANG1>;
@@ -99,12 +109,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_base {
+        layer_keymap {
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
 &kp Q       &kp E       &mt LGUI I  &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RGUI S  &kp H       &kp P       
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
-                                                &lt 1 BSPC  &mt LCTRL RET       &mt RCTRL TAB &lt 2 SPACE 
+                                                &lt 1 RET   &mt LCTRL DEL       &mt RCTRL BSPC &lt 2 SPACE 
             >;
         };
 
@@ -119,9 +129,9 @@
 
         layer_navi {
             bindings = <
-                        &kp LBKT    &kp DQT     &kp RBKT    &kp AMPS            &kp C_VOL_UP &kp ESC    &kp UP      &kp CAPS    
-&kp AT      &kp HASH    &mt LCTRL LPAR &mt LALT SQT &mt LSHFT RPAR &kp PIPE     &kp C_VOL_DN &kp LEFT   &kp DOWN    &kp RIGHT   &kp C_BRI_UP &kp PSCRN  
-            &kp BSLH    &kp LBRC    &kp GRAVE   &kp RBRC                                    &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_BRI_DN 
+                        &kp LBKT    &kp DQT     &kp RBKT    &kp AMPS            &kp C_VOL_UP &kp HOME   &kp UP      &kp END     
+&kp AT      &kp HASH    &mt LCTRL LPAR &mt LALT DEL &mt LSHFT RPAR &kp PIPE     &kp C_VOL_DN &kp LEFT   &kp DOWN    &kp RIGHT   &kp C_BRI_UP &kp PSCRN  
+            &kp BSLH    &kp LBRC    &kp SQT     &kp RBRC                                    &kp GRAVE   &kp LS(TAB) &kp TAB     &kp C_BRI_DN 
                                                 &lt 6 BSPC  &trans              &trans      &none       
             >;
         };
@@ -164,27 +174,27 @@
 
         layer_extra_1 {
             bindings = <
-                        &none       &none       &none       &none               &none       &none       &none       &none
-&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none 
-            &none       &none       &none       &none                                       &none       &none       &none       &none
+                        &none       &none       &none       &none               &none       &none       &none       &none       
+&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
+            &none       &none       &none       &none                                       &none       &none       &none       &none       
                                                 &none       &none               &none       &none       
             >;
         };
 
         layer_extra_2 {
             bindings = <
-                        &none       &none       &none       &none               &none       &none       &none       &none
-&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none 
-            &none       &none       &none       &none                                       &none       &none       &none       &none
+                        &none       &none       &none       &none               &none       &none       &none       &none       
+&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
+            &none       &none       &none       &none                                       &none       &none       &none       &none       
                                                 &none       &none               &none       &none       
             >;
         };
 
         layer_extra_3 {
             bindings = <
-                        &none       &none       &none       &none               &none       &none       &none       &none
-&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none 
-            &none       &none       &none       &none                                       &none       &none       &none       &none
+                        &none       &none       &none       &none               &none       &none       &none       &none       
+&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
+            &none       &none       &none       &none                                       &none       &none       &none       &none       
                                                 &none       &none               &none       &none       
             >;
         };
