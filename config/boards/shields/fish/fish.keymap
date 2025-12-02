@@ -83,7 +83,7 @@
 
         combo_nn {
             key-positions = <16 17>;
-            bindings = <&macro nn>;
+            bindings = <&kp N &kp N>;
         };
 
         combo_lang1 {
