@@ -47,12 +47,6 @@
     };
 
     macros {
-        compatible = "zmk,behaviors";
-
-        nn {
-            compatible = "zmk,behavior-macro";
-            bindings = <&kp N &kp N>;
-        };
     };
 
     conditional_layers {
