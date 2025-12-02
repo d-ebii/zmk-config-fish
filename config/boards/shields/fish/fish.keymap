@@ -75,7 +75,7 @@
             bindings = <&kp ESC>;
         };
 
-        combo_n {
+        combo_ {
             key-positions = <16 17>;
             bindings = <&>;
         };
