@@ -50,9 +50,92 @@
             #binding-cells = <0>;
             bindings = <&kp X>, <&kp N>;
         };
+
+        // 右
+        td_right: tap_dance_right {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_RIGHT";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;      // 連打判定時間。好みで調整
+            bindings = <&kp RIGHT_ARROW>, <&right5>;
+        };
+
+        // 左
+        td_left: tap_dance_left {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LEFT";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LEFT_ARROW>, <&left5>;
+        };
+
+        // 上
+        td_up: tap_dance_up {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_UP";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp UP_ARROW>, <&up5>;
+        };
+
+        // 下
+        td_down: tap_dance_down {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_DOWN";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DOWN_ARROW>, <&down5>;
+        };
     };
 
     macros {
+        right5: right5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &kp RIGHT_ARROW
+                &kp RIGHT_ARROW
+                &kp RIGHT_ARROW
+                &kp RIGHT_ARROW
+                &kp RIGHT_ARROW
+            >;
+        };
+
+        left5: left5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &kp LEFT_ARROW
+                &kp LEFT_ARROW
+                &kp LEFT_ARROW
+                &kp LEFT_ARROW
+                &kp LEFT_ARROW
+            >;
+        };
+
+        up5: up5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &kp UP_ARROW
+                &kp UP_ARROW
+                &kp UP_ARROW
+                &kp UP_ARROW
+                &kp UP_ARROW
+            >;
+        };
+
+        down5: down5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &kp DOWN_ARROW
+                &kp DOWN_ARROW
+                &kp DOWN_ARROW
+                &kp DOWN_ARROW
+                &kp DOWN_ARROW
+            >;
+        };
     };
 
     conditional_layers {
@@ -135,8 +218,8 @@
 
         layer_navi {
             bindings = <
-                        &kp LBKT    &kp DQT     &kp RBKT    &kp AMPS            &kp PG_UP   &kp HOME    &kp UP      &kp END     
-&kp AT      &kp HASH    &mt LCTRL LPAR &mt LALT DEL &mt LSHFT RPAR &kp PIPE     &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp C_BRI_UP &kp PSCRN  
+                        &kp LBKT    &kp DQT     &kp RBKT    &kp AMPS            &kp PG_UP   &kp HOME    &td_up      &kp END     
+&kp AT      &kp HASH    &mt LCTRL LPAR &mt LALT DEL &mt LSHFT RPAR &kp PIPE     &kp PG_DN   &td_left    &td_down    &td_right   &kp C_BRI_UP &kp PSCRN  
             &kp BSLH    &kp LBRC    &kp SQT     &kp RBRC                                    &kp GRAVE   &kp LS(TAB) &kp TAB     &kp C_BRI_DN 
                                                 &lt 6 BSPC  &trans              &trans      &none       
             >;
