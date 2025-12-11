@@ -86,6 +86,19 @@
             tapping-term-ms = <200>;
             bindings = <&kp DOWN_ARROW>, <&down5>;
         };
+
+        excel_rename_next_sheet: excel_rename_next_sheet {
+            compatible = "zmk,behavior-macro";
+            label = "EXCEL_RENAME_NEXT_SHEET";
+            #binding-cells = <0>;
+            bindings = <
+                &kp LC(PG_DN)  // Ctrl + PageDown（右のシートへ）
+                &kp LALT       // Alt
+                &kp H          // H
+                &kp O          // O
+                &kp R          // R
+            >;
+        };
     };
 
     macros {
@@ -254,7 +267,7 @@
 
         layer_system {
             bindings = <
-                        &bt BT_SEL 4 &bt BT_CLR &bt BT_CLR_ALL &out OUT_TOG     &tog 3      &kp INS     &kp HOME    &kp PG_UP   
+                        &bt BT_SEL 4 &bt BT_CLR &bt BT_CLR_ALL &out OUT_TOG     &excel_rename_next_sheet  &kp INS     &kp HOME    &kp PG_UP   
 &kp F1      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp F6          &kp F7      &kp DEL     &kp END     &kp PG_DN   &kp K_APP   &kp F12     
             &kp F2      &kp F3      &kp F4      &kp F5                                      &kp F8      &kp F9      &kp F10     &kp F11     
                                                 &none       &none               &none       &none       
