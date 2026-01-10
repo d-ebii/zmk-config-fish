@@ -265,7 +265,7 @@
         layer_extra_1 {
             bindings = <
                         &kp Q       &kp W       &kp E       &kp Y           &kp K       &kp W       &kp R       &kp Y       
-&kp Q       &kp LCTRL   &kp A       &kp S       &kp D       &kp F           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
+&kp TAB     &kp LCTRL   &kp A       &kp S       &kp D       &kp F           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
             &kp LSHFT   &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
                                                 &lt 4 BSPC  &mt LGUI RET        &mt RGUI TAB &lt 5 SPACE 
             >;
