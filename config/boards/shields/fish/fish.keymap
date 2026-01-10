@@ -255,7 +255,7 @@
 
         layer_system {
             bindings = <
-                        &bt BT_SEL 4 &bt BT_CLR &bt BT_CLR_ALL &out OUT_TOG     &tog 3      &kp INS     &kp HOME    &kp PG_UP   
+                        &bt BT_SEL 4 &bt BT_CLR &bt BT_CLR_ALL &out OUT_TOG     &tog 7      &kp INS     &kp HOME    &kp PG_UP   
 &kp F1      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp F6          &kp F7      &kp DEL     &kp END     &kp PG_DN   &kp K_APP   &kp F12     
             &kp F2      &kp F3      &kp F4      &kp F5                                      &kp F8      &kp F9      &kp F10     &kp F11     
                                                 &none       &none               &none       &none       
@@ -264,10 +264,10 @@
 
         layer_extra_1 {
             bindings = <
-                        &none       &none       &none       &none               &none       &none       &none       &none       
-&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
-            &none       &none       &none       &none                                       &none       &none       &none       &none       
-                                                &none       &none               &none       &none       
+                        &kp Q       &kp W       &kp E       &kp Y           &kp K       &kp W       &kp R       &kp Y       
+&kp Q       &kp LCTRL   &kp A       &kp S       &kp D       &kp F           &kp G       &mt RSHFT T &mt RALT N  &mt RCTRL S &kp H       &kp P       
+            &kp LSHFT   &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
+                                                &lt 4 BSPC  &mt LGUI RET        &mt RGUI TAB &lt 5 SPACE 
             >;
         };
 
