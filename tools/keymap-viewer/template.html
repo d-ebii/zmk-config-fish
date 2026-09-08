@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>おさかな — 現在のキーマップ</title><style>/*__STYLE__*/</style></head>
+<body>
+<header class="topbar"><a class="brand" href="#layout-0" aria-label="通常配列へ"><svg viewBox="0 0 54 32" aria-hidden="true"><path d="M3 16C14-1 35-1 45 16 35 33 14 33 3 16Zm40 0 10-12v24Z" fill="currentColor"/><circle cx="15" cy="13" r="2" fill="white"/></svg><span>おさかな<small>KEYMAP ATLAS</small></span></a><div class="build-state"><span id="live-status">保存済みHTML</span><code id="source-hash"></code></div></header>
+<div id="update-error" class="notice error" role="alert" hidden></div>
+<main>
+<div class="intro"><div><p class="eyebrow">YOUR KEYBOARD, AT A GLANCE</p><h1>いまの配列を、ひと目で。</h1><p>キーの役割も、レイヤーへの入り方も。設定ファイルからそのまま描いています。</p></div><div class="stats" id="stats"></div></div>
+<nav class="tabs" aria-label="表示内容"><button data-tab="layout">配列を見る</button><button data-tab="routes">ルーティング</button><button data-tab="combos">コンボ</button><button data-tab="settings">設定とマクロ</button></nav>
+<div class="workspace"><aside class="sidebar"><div class="sidebar-heading">LAYERS <span id="layer-count"></span></div><div id="layer-list"></div><p class="sidebar-note">番号が大きいレイヤーが優先。<br>透過キーだけ下の層へ。</p></aside><div class="content">
+<section id="panel-layout" class="panel"><div class="section-heading"><div><p class="eyebrow" id="layer-status"></p><h2 id="layer-title"></h2></div><label class="switch"><input type="checkbox" id="show-positions">キー番号</label></div>
+<div id="keyboard" class="keyboard"></div><div class="legend"><span><i class="dot tap"></i>タップ</span><span><i class="dot hold"></i>長押し / 切替</span><span>▽ 透過</span><span>— 無効</span><span class="hint">キーを選ぶと詳しい設定を表示</span></div>
+<div class="below-keyboard"><section class="card key-detail" id="key-detail" aria-live="polite"></section><section class="card entry-detail" id="entry-detail"></section></div></section>
+<section id="panel-routes" class="panel" hidden><div class="section-heading"><div><p class="eyebrow">LAYER ROUTING</p><h2>入り方と、戻り方。</h2></div><span class="pill">起動時 L0 から解析</span></div><p class="muted">線を選ぶと操作の説明へ。レイヤーを選ぶと、その層の経路を確認できます。</p><div id="route-map" class="route-map"></div><div class="legend"><span><i class="line"></i>使える遷移</span><span><i class="line blocked"></i>隠れる / 戻れない</span><span><i class="line unreachable"></i>入口に到達できない</span></div><div id="route-details"></div><details class="method"><summary>解析の前提</summary><ul id="route-assumptions"></ul></details></section>
+<section id="panel-combos" class="panel" hidden><div class="section-heading"><div><p class="eyebrow">PRESS TOGETHER</p><h2>同時押しのショートカット</h2></div><span class="pill" id="combo-count"></span></div><p class="muted">コンボを選ぶと位置を表示します。数字は0から始まる物理キー番号です。</p><div id="combo-keyboard" class="keyboard compact"></div><div id="combo-detail" class="notice"></div><div id="combo-list" class="combo-grid"></div></section>
+<section id="panel-settings" class="panel" hidden><div class="section-heading"><div><p class="eyebrow">BEHIND THE KEYS</p><h2>設定とマクロ</h2></div></div><div id="settings-content"></div></section>
+<section class="warnings" id="warnings"></section>
+</div></div>
+<footer><div><strong>fish.keymap から自動生成</strong><p id="source-path"></p><p>リポジトリの設定を表示しています。書き込み済みの機器や、ZMK Studioに保存した変更は取得しません。</p></div><div><a href="https://o24.works/fish/editor/" target="_blank" rel="noreferrer">参考：公式キーマップエディター ↗</a><p>保存に追従：<code>npm run keymap:view</code><br>HTMLを生成：<code>npm run keymap:build</code></p></div></footer>
+</main>
+<script id="keymap-data" type="application/json">/*__MODEL__*/</script><script>/*__SCRIPT__*/</script>
+</body></html>

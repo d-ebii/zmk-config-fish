@@ -1,0 +1,56 @@
+name: Keymap viewer
+
+on:
+  push:
+    paths:
+      - 'config/**'
+      - 'tools/keymap-viewer/**'
+      - 'src/**'
+      - 'tests/raijin/**'
+      - 'dts/**'
+      - 'zephyr/**'
+      - 'CMakeLists.txt'
+      - 'Kconfig'
+      - 'package.json'
+      - '.github/workflows/keymap-viewer.yml'
+  pull_request:
+    paths:
+      - 'config/**'
+      - 'tools/keymap-viewer/**'
+      - 'src/**'
+      - 'tests/raijin/**'
+      - 'dts/**'
+      - 'zephyr/**'
+      - 'CMakeLists.txt'
+      - 'Kconfig'
+      - 'package.json'
+      - '.github/workflows/keymap-viewer.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  viewer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Test parser, routing and saved-file updates
+        run: npm test
+      - name: Test Raijin input state machine
+        run: sh tests/raijin/run.sh
+      - name: Test Raijin ZMK adapter contracts
+        run: sh tests/raijin/run_adapter.sh
+      - name: Generate current keymap HTML
+        run: npm run keymap:build
+      - uses: actions/upload-artifact@v7
+        with:
+          name: keymap-viewer
+          path: docs/keymap/index.html
+          if-no-files-found: error

@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: MIT
+
+config ZMK_BEHAVIOR_ONISHI_RAIJIN
+    bool
+    default y
+    depends on DT_HAS_ZMK_BEHAVIOR_ONISHI_RAIJIN_ENABLED
+    help
+      Right-hand Onishi Raijin input with held-consonant vowels.

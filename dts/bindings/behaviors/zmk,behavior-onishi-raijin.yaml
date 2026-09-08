@@ -1,0 +1,27 @@
+# SPDX-License-Identifier: MIT
+
+description: Onishi Raijin held-consonant input
+compatible: "zmk,behavior-onishi-raijin"
+include: two_param.yaml
+
+properties:
+  main-layer:
+    type: int
+    required: true
+    description: Stable ID of the main Raijin layer.
+  auxiliary-layer:
+    type: int
+    required: true
+    description: Stable ID of its temporary auxiliary layer.
+  tapping-term-ms:
+    type: int
+    default: 180
+    description: Backspace tap versus auxiliary-layer hold threshold.
+  vowel-positions:
+    type: array
+    required: true
+    description: Physical positions that emit vowels while a consonant is held.
+  vowel-keycodes:
+    type: array
+    required: true
+    description: Encoded vowel keycodes corresponding to vowel-positions.

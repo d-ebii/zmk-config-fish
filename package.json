@@ -1,0 +1,13 @@
+{
+  "name": "fish-keymap-viewer",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "keymap:build": "node tools/keymap-viewer/generate.mjs",
+    "keymap:view": "node tools/keymap-viewer/serve.mjs",
+    "keymap:check": "node tools/keymap-viewer/generate.mjs --check",
+    "test": "node --test tools/keymap-viewer/*.test.mjs"
+  }
+}

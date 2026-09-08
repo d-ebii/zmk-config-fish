@@ -1,1 +1,8 @@
 .DS_Store
+
+# Locally generated firmware and visual verification output.
+/artifacts/
+/docs/**/qa/
+
+# Local planning and review notes.
+/tasks/
